@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: @artifactId@
+
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    hikari:
+      pool-name: HikariCP
+      minimum-idle: 16
+      idle-timeout: 600000
+      maximum-pool-size: 256
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+
+mybatis-plus:
+  configuration:
+    local-cache-scope: statement #\u5173\u95ED\u4E00\u7EA7\u7F13\u5B58
+    cache-enabled: false #\u5173\u95ED\u4E8C\u7EA7\u7F13\u5B58
+  mapper-locations: classpath*:/mapper/**/*.xml

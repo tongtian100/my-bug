@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bug.mybug.repository.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bug.mybug.entity.UserEntity">
+        <result column="id" property="id" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="deleted_time" property="deletedTime" />
+        <result column="deleted" property="deleted" />
+        <result column="created_by" property="createdBy" />
+        <result column="updated_by" property="updatedBy" />
+        <result column="version" property="version" />
+        <result column="username" property="username" />
+        <result column="password_hash" property="passwordHash" />
+        <result column="email" property="email" />
+        <result column="first_name" property="firstName" />
+        <result column="last_name" property="lastName" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="date_of_birth" property="dateOfBirth" />
+        <result column="gender" property="gender" />
+        <result column="address" property="address" />
+        <result column="city" property="city" />
+        <result column="state" property="state" />
+        <result column="country" property="country" />
+        <result column="postal_code" property="postalCode" />
+        <result column="last_login" property="lastLogin" />
+        <result column="is_active" property="isActive" />
+        <result column="is_staff" property="isStaff" />
+        <result column="profile_picture" property="profilePicture" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        created_time,
+        updated_time,
+        deleted_time,
+        deleted,
+        created_by,
+        updated_by,
+        version,
+        username, password_hash, email, first_name, last_name, phone_number, date_of_birth, gender, address, city, state, country, postal_code, last_login, is_active, is_staff, profile_picture
+    </sql>
+
+</mapper>
